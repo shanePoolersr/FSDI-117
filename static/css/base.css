@@ -46,6 +46,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--background-color);
 }
 
 /*Text Style*/
@@ -71,4 +72,8 @@ p {
 .break {
     position: absolute;
     margin-top: -60;
+}
+
+section {
+    background-color: var(--background-color);
 }

@@ -49,7 +49,19 @@
 .projects-section {
     flex-direction: column;
     padding: 2rem;
-    background-color: var(--secondary-color-900);
+    /*background-color: var(--secondary-color-900); */
+    margin-bottom: 2rem;
+    border-bottom: solid 2px gray;
+    border-top: solid 2px gray;
+    /* background-color: #0000008d; */
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 20px 5px 15px 15px #0000005b;
+    transition: all 250ms;
+}
+
+.projects-section:hover {
+    transform: scale(1.01);
 }
 
 .project-card img {
@@ -58,6 +70,7 @@
 }
 
 .project-card {
+    margin: 3rem;
     border-radius: 1%;
     display: flex;
     flex-wrap: wrap;
@@ -67,11 +80,12 @@
 }
 
 .project-card:hover {
-    opacity: 0.5;
+    /*opacity: 0.5;*/
     border: 1px solid var(--secondary-color);
 }
 
 .technologies {
+    display: flex;
     justify-content: flex-start;
     gap: 0.5rem;
     flex-wrap: wrap;
@@ -130,7 +144,7 @@ a p:nth-child(4),
     gap: 0.5rem;
 }
 
-/*---- Contact ----*/
+/*---- Contact Section----*/
 .contact-section {
     flex-direction: column;
     padding: 2rem;
@@ -148,4 +162,28 @@ a p:nth-child(4),
     margin-top: 2rem;
 }
 
+.manage-section {
+    flex-direction: column;
+}
+
+#project-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    height: 35rem;
+    justify-content: space-evenly;
+    width: 35rem;
+    padding: 3%;
+    border: 1px solid var(--secondary-color);
+}
+
+#experience-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    height: 35rem;
+    justify-content: space-evenly;
+    width: 35rem;
+    padding: 3%;
+    border: 1px solid var(--secondary-color);
 }

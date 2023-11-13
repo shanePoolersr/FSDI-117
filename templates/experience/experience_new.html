@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} New Experience {% endblock title %}
+{% load static %}
+
+{% block content %}
+<section class="manage-section center">
+    <h2>Create a new experience </h2>
+
+    <form id="experience-form" method="post">
+        {% csrf_token %}
+
+        {{ form.entity}}
+        {{ form.title}}
+        {{ form.description}}
+        {{ form.period}}
+        {{ form.technologies }}
+
+        <button class="btn btn-primary" type="submit">Create experience</button>
+    </form>
+</section>
+{% endblock content %}

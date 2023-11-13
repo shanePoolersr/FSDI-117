@@ -1,9 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +15,8 @@
     <link rel="stylesheet" href="{% static './css/sections.css' %}">
     <link rel="stylesheet" href="{% static './css/footer.css' %}">
     <link rel="stylesheet" href="{% static './css/responsive.css' %}">
-    <title>{% block title %}{% endblock %}</title>
 
+    <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -28,7 +27,6 @@
                 <h2>Shane Pooler</h2>
             </a>
         </div>
-
 
         <!--right side-->
         <nav>
@@ -43,10 +41,10 @@
             </div>
 
             <div class="nav-link center">
-                <a href="{% url 'home' %}>About me</a>
-                <a href=" #section-2">Projects</a>
-                <a href="#section-3">Experience</a>
-                <a href="#section-4">Contact</a>
+                <a href="{% url 'home' %}">About me</a>
+                <a href="{% url 'projects_list' %}">Projects</a>
+                <a href="{% url 'experience_list' %}">Experience</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </div>
         </nav>
     </header>
@@ -55,24 +53,21 @@
     {% endblock content %}
 
     <footer>
-
-        <a href="#section-1">
+        <a href="{% url 'home' %}">
             <h2>Shane Pooler</h2>
         </a>
+
+        <nav class="nav-footer center">
+            <a href="{% url 'home' %}">About me</a>
+            <a href="{% url 'projects_list' %}">Projects</a>
+            <a href="{% url 'experience_list' %}">Experience</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+
     </footer>
-
-    <nav class="nav-footer center">
-        <a href="#section-1">About me</a>
-        <a href="#section-2">Projects</a>
-        <a href="#section-3">Experience</a>
-        <a href="#section-4">Contact</a>
-    </nav>
-
-    </footer>
-
-    <script src="{ static % './js/main.js' %}"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

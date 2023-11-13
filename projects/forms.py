@@ -3,8 +3,8 @@ from .models import Project
 
 class ProjectForm(forms.ModelForm):
     class Meta:
-        model =Project
-        field=['name', 'description', 'year', 'img', 'respository', 'technologies']
+        model = Project
+        fields=['name', 'description', 'year', 'img', 'respository', 'technologies']
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Projects Description'}),
             
